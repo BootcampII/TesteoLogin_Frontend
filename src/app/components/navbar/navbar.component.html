@@ -1,0 +1,23 @@
+<header>
+    <div class="logo"><a><strong>APP Auth</strong></a></div>
+    <div class="burger" (click)="toggleMenu()"><i class="ri-menu-line icon"></i></div>
+    <nav class="navbar" [class.mobile-menu]="isMenuOpen">
+        <ul class="links">
+            <a routerLink="/" *ngIf="!isLoggedIn" >
+                <li>Home</li>
+            </a>
+            <a routerLink="/register" *ngIf="!isLoggedIn" >
+                <li>Register</li>
+            </a>
+            <a routerLink="/login" *ngIf="!isLoggedIn" >
+                <li>Login</li>
+            </a>
+            <a routerLink="/csv-home"  *ngIf="isLoggedIn">
+                <li>CSV Home</li>
+            </a>
+            <li>
+                <button class="logout-button"  *ngIf="isLoggedIn" (click)="logout()" >Logout</button>
+            </li>
+        </ul>
+    </nav>
+</header>
