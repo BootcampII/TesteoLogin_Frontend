@@ -34,7 +34,6 @@ describe('LoginComponent Test', () => {
     expect(component).toBeTruthy();
   });
 
-  // Caso de éxito - El usuario se logueó correctamente
   it('Debería loguear al usuario al usar el método onSubmit', () => {
     // Arrange
     component.email = userEmail;
